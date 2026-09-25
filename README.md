@@ -2,6 +2,8 @@
 
 [View as PDF](https://romeov.github.io/VisualCeTZ/visual-cetz.pdf). [View as HTML](https://romeov.github.io/VisualCeTZ/).
 
+See also the [CeTZ Gallery](https://romeov.github.io/CeTZGallery/), complete diagrams that put these techniques to work.
+
 One picture per command or parameter for [CeTZ](https://cetz-package.github.io/) 0.5.2, the drawing package for [Typst](https://typst.app/).
 
 This is an adaptation of Jean Pierre Casteleyn's fantastic [_Visual TikZ_](https://ctan.org/pkg/visualtikz) ([PDF](https://mirrors.ctan.org/info/visualtikz/VisualTikZ.pdf), LPPL 1.3), which does the same for TikZ.
