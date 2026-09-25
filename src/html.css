@@ -1,0 +1,19 @@
+:root { --bg: #fff; --fg: #111; --muted: #555; --rule: #ddd; --accent: #85144b; --link: #0074d9; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #161616; --fg: #eee; --muted: #aaa; --rule: #444; --accent: #ff7b9c; --link: #7fdbff; } }
+body { background: var(--bg); color: var(--fg); font: 15px/1.5 "Helvetica Neue", Arial, system-ui, sans-serif;
+  max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
+h1, h2, h3, h4 { color: var(--accent); } a { color: var(--link); }
+/* Tables stay light in dark mode: Typst's syntax colors assume a light background. */
+table { border-collapse: collapse; width: 100%; margin: 8px 0 20px; display: block; overflow-x: auto;
+  background: #fff; color: #111; }
+td, th { border: 1px solid #ddd; padding: 6px; vertical-align: bottom; text-align: center; }
+td:has(> code), td:has(> pre) { text-align: left; vertical-align: middle; }
+table a { color: #0074d9; }
+svg { max-width: 100%; height: auto; }
+pre, code { font: 12px/1.4 Menlo, "DejaVu Sans Mono", ui-monospace, monospace; }
+pre { background: #f5f5f5; padding: 6px 8px; margin: 0; white-space: pre-wrap; text-align: left; }
+.badges { text-align: center; margin: 4px 0; }
+.badge { display: inline-block; font-size: 12px; font-weight: 700; text-decoration: none; padding: 1px 8px;
+  border: 1px solid currentColor; border-radius: 3px; color: var(--accent); margin: 0 2px; }
+.unported { border-left: 3px solid var(--rule); padding: 2px 10px; color: var(--muted); font-size: 13px; margin: 8px 0; }
