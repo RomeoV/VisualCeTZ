@@ -1,6 +1,7 @@
 #import "src/lib.typ": *
 
 #let repo = "https://github.com/RomeoV/VisualCeTZ"
+#let site = "https://romeov.github.io/VisualCeTZ/"
 #let visual-tikz = "https://ctan.org/pkg/visualtikz"
 
 #set document(title: "Visual CeTZ")
@@ -25,9 +26,10 @@
   let front = [
     One picture per command or parameter, for CeTZ 0.5.2.
 
+    #link(site + "visual-cetz.pdf")[View as PDF]. #link(site)[View as HTML]. #link(repo)[View source].
+
     Adapted from Jean Pierre Casteleyn's fantastic work _Visual TikZ_ [1], which does the same for TikZ.
     Its structure, section order and examples inspired every chapter here; the CeTZ code and pictures are new.
-    Source: #link(repo).
 
     [1] Jean Pierre Casteleyn, _Visual TikZ_, version 0.65, 2018.
     #link(visual-tikz)[CTAN: visualtikz], #link("https://mirrors.ctan.org/info/visualtikz/VisualTikZ.pdf")[PDF].

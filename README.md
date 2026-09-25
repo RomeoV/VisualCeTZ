@@ -1,6 +1,6 @@
 # Visual CeTZ
 
-**[Read it online](https://romeov.github.io/VisualCeTZ/)** · **[PDF](visual-cetz.pdf)**
+[View as PDF](https://romeov.github.io/VisualCeTZ/visual-cetz.pdf). [View as HTML](https://romeov.github.io/VisualCeTZ/).
 
 One picture per command or parameter for [CeTZ](https://cetz-package.github.io/) 0.5.2, the drawing package for [Typst](https://typst.app/).
 
@@ -20,4 +20,8 @@ With Typst 0.15 or later:
 ./build.sh
 ```
 
-This writes `visual-cetz.pdf` and `docs/index.html`, which GitHub Pages serves. The HTML export uses Typst's experimental `html` feature.
+This writes `docs/visual-cetz.pdf` and `docs/index.html`, which GitHub Pages serves. The HTML export uses Typst's experimental `html` feature.
+
+## License
+
+MIT for this adaptation; see [LICENSE](LICENSE). _Visual TikZ_ itself is under the LaTeX Project Public License 1.3.
