@@ -310,6 +310,14 @@ rect((0, 0), (2, 1), fill: tan)",
   "let pale = red.lighten(75%)
 rect((0, 0), (2, 1), fill: pale)")
 
+=== Colors from a map
+#typst-manual("visualize/gradient/#definitions-sample", "gradient.sample")
+#variants("let g = gradient.linear(..VALUE)
+for i in range(6) {
+  circle((i * .45, 0), radius: .2, fill: g.sample(i * 20%), stroke: none)
+}", ("color.map.viridis", "color.map.turbo", "(blue, white, red)"), columns: 3)
+`color.map.viridis` and its siblings are arrays of colors; `sample` picks the color at a ratio.
+
 == Opacity
 #typst-manual("visualize/color/#definitions-transparentize", "transparentize")
 #variants("line((0, 0), (2, 1), stroke: 8pt + red)
@@ -382,6 +390,13 @@ tag((2, 0))[more]")
   }
 })
 The flag #flag sits in the text.")
+
+#block(sticky: true)[`.with` presets the arguments of a draw function:]
+#examples(
+  "let wall = line.with(stroke: 4pt + gray)
+let door = arc.with(radius: 1, anchor: \"origin\", mode: \"PIE\", stroke: .5pt)
+wall((1, 0), (3, 0), (3, 2), (0, 2), (0, 0))
+door((1, 0), start: 90deg, delta: 90deg)")
 
 == Own styles
 #manual("api/draw-functions/styling/set-style", label: "set-style")

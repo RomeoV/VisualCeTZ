@@ -59,6 +59,10 @@
 ), columns: 3, prelude: bg(2, 1, y: -1))
 #variants("arc((0, 0), start: 30deg, stop: 300deg, mode: VALUE, fill: green.lighten(60%), stroke: teal)",
   ("\"OPEN\"", "\"CLOSE\"", "\"PIE\""), columns: 3)
+#variants("arc((1, 0), start: 30deg, stop: 150deg, anchor: VALUE, stroke: 2pt + blue)
+circle((1, 0), radius: 3pt, fill: red, stroke: none)",
+  ("none", "\"origin\"", "\"arc-center\"", "\"chord-center\""), prelude: bg(2, 1, x: -1, y: -1))
+`anchor` puts that point of the arc on the position (red). By default the arc starts there.
 
 === Parabola
 #manual("api/draw-functions/shapes/bezier", label: "bezier")
@@ -144,6 +148,22 @@ for p in pts { circle(p, radius: 3pt, stroke: red) }")
   line((0.5, 0.5), (2.5, 0.5))
   line((0.5, 1.5), (2.5, 1.5))
 })")
+
+=== Boolean operations
+#manual("api/draw-functions/shapes/boolean", label: "boolean")
+#variants("boolean({ circle((0, 0)) }, { circle((1.2, 0)) }, op: VALUE,
+  fill: eastern.lighten(60%), stroke: 2pt + blue)",
+  ("\"union\"", "\"intersection\"", "\"difference\"", "\"xor\""), length: 0.6cm)
+#block(sticky: true)[An operand is a body or the name of an element drawn before. The default `op` is `"difference"`.]
+#examples(prelude: bg(4, 3),
+  "rect((0, 0), (3, 2), radius: .3, name: \"r\", stroke: gray)
+circle((3, 2), name: \"c\", stroke: gray)
+boolean(\"r\", \"c\", op: \"intersection\",
+  fill: red.lighten(60%), stroke: red)",
+  "boolean(op: \"difference\",
+  { rect((0, 0), (4, 3)) },
+  { rect((.2, .2), (3.8, 2.8)); rect((1.5, -.1), (rel: (1, .4))) },
+  fill: gray, stroke: none)")
 
 === Subpath start
 #manual("basics/anchors#path", label: "path anchors")

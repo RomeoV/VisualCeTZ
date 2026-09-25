@@ -330,6 +330,9 @@ line((0, 2), (4, 2), stroke: 2pt + eastern)
 line((0, 0), ((0, 2), 75%, (4, 2)), stroke: red)
 circle((((0, 2), 75%, (4, 2)), 66%, (0, 0)), radius: 3pt, fill: red)
 ```.text, length: .8cm)
+#block(sticky: true)[Ratios outside 0–100% continue past the ends:]
+#variants("line((0, 1), (2, 1), stroke: 2pt + eastern)\ncircle(((0, 1), VALUE, (2, 1)), radius: 4pt, fill: red)",
+  ("-50%", "150%", "200%"), columns: 3, length: .7cm, prelude: "grid((-1, 0), (4, 2), help-lines: true)\n")
 
 === Interpolation by distance
 #manual("basics/coordinate-systems#interpolation", label: "interpolation")

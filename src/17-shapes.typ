@@ -31,7 +31,7 @@ content((0, 0), [text], frame: "rect", padding: .1, VALUE)
   "wrap: text.with(red)",
 ), columns: 3)
 
-`content` frames have no corner radius and no double stroke. Frame the named element with `rect-around`:
+`content` frames have no corner radius and no double stroke. Frame the named element with `rect-around`, or pass a Typst `box` as the body:
 
 #examples(
   ```
@@ -42,6 +42,9 @@ rect-around("t", radius: .1, stroke: blue)
 content((0, 0), [text], name: "t", padding: .1)
 rect-around("t", stroke: blue)
 rect-around("t", padding: .06, stroke: blue)
+```.text,
+  ```
+content((0, 0), box(fill: red.lighten(80%), stroke: blue, inset: 4pt, radius: 4pt)[text])
 ```.text,
 )
 

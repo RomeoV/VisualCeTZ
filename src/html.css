@@ -9,6 +9,8 @@ table { border-collapse: collapse; width: 100%; margin: 8px 0 20px; display: blo
   background: #fff; color: #111; }
 td, th { border: 1px solid #ddd; padding: 6px; vertical-align: bottom; text-align: center; }
 td:has(> code), td:has(> pre) { text-align: left; vertical-align: middle; }
+/* Typst drops cell alignment in HTML; header cells hold the template code. */
+th { text-align: left; }
 table a { color: #0074d9; }
 svg { max-width: 100%; height: auto; }
 pre, code { font: 12px/1.4 Menlo, "DejaVu Sans Mono", ui-monospace, monospace; }

@@ -402,6 +402,16 @@ for z in (-1, 0, 1) { content((2, z), text(7pt)[#z], anchor: "west", padding: 3p
 #variants("ortho(x: -60deg, y: 0deg, z: VALUE, surface((x, y) => -x * y))",
   ("-10deg", "-30deg", "-60deg", "-120deg"), prelude: surf)
 
+=== Drawing order
+#manual("api/draw-functions/projections/ortho", label: "ortho")
+#variants(```
+ortho(x: -60deg, y: 0deg, z: -30deg, sorted: VALUE, {
+  on-xy(z: 1, rect((-1, -1), (1, 1), fill: red.lighten(40%)))
+  on-xy(z: 0, rect((-1, -1), (1, 1), fill: eastern.lighten(40%)))
+})
+```.text, ("true", "false"), columns: 2)
+`sorted: false` keeps the order of the code, e.g. to keep labels in front of faces.
+
 == Data plots with lilaq <lilaq>
 Use lilaq (`@preview/lilaq:0.6.0`) for plots with axes, ticks, legends and log scales;
 its diagrams are plain content and sit next to a CeTZ canvas. cetz-plot 0.1.3 pins CeTZ 0.4.2,
