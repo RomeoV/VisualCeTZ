@@ -22,7 +22,7 @@ With Typst 0.15 or later:
 ./build.sh
 ```
 
-This writes `docs/visual-cetz.pdf` and `docs/index.html`, which GitHub Pages serves. The HTML export uses Typst's experimental `html` feature.
+This writes `docs/visual-cetz.pdf`, `docs/index.html`, and one PNG per page in `docs/pages/` (the contents are on pages 1 and 2), which GitHub Pages serves. The HTML export uses Typst's experimental `html` feature.
 
 ## License
 
